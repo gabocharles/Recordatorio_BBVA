@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #072146; /* Fondo de color hex */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+    .logo {
+      margin-top: 20px; /* Espacio desde la parte superior */
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex: 1;
+      gap: 20px; /* Espaciado entre el video y el botón */
+    }
+    .video {
+      flex: 1;
+      max-width: 50%; /* Limita el ancho al 50% */
+      text-align: center;
+    }
+    .button-container {
+      flex: 1;
+      max-width: 50%; /* Limita el ancho al 50% */
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn {
+      background-color: #2DCCCD; /* Nuevo color del botón */
+      color: #ffffff; /* Color del texto del botón */
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #25b3b2; /* Cambio de color al pasar el mouse */
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="BBVA_WHITE.png" alt="BBVA Logo" width="200">
+  </div>
+
+  <!-- Contenido principal: video a la izquierda y botón a la derecha -->
+  <div class="content">
+    <!-- Video -->
+    <div class="video">
+      <iframe 
+        src="https://www.youtube.com/embed/s_djVpk28-o?si=6WcDHWGE4N9l_js9" 
+        title="Video de YouTube" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Botón para abrir el formulario -->
+    <div class="button-container">
+      <button class="btn" onclick="openTallyPopup()">Programar recordatorio</button>
+    </div>
+  </div>
+
+  <!-- Script para el popup de Tally -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <script>
+    function openTallyPopup() {
+      // Popup del formulario
+      Tally.openPopup('3XB7PY');
+    }
+  </script>
+</body>
+</html>
